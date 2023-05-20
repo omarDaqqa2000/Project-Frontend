@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link href='assests/css/loginStyle.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+  
+	  
+ <!-- sweet alert css-->
+ <link href="assests/css/sweetalert2.min.css" rel="stylesheet"/>
+</head>
+ <body>  
+    
+    <div class="footer">
+        <a href="#" class="fa fa-facebook"></a><br>
+        <a href="#" class="fa fa-twitter"></a><br>
+        <a href="#" class="fa fa-google"></a><br>
+        <a href="#" class="fa fa-linkedin"></a><br>
+        <a href="#" class="fa fa-instagram"></a><br>
+    </div> 
+
+    <div id="login-button">
+        <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png">
+        </img>
+    </div>
+     <div class="nav-bar">
+    <h1 style="text-align: left; padding-left: 2%;padding-top: 1%; font-size :370%;">Car Rental Office</h1>
+    <div class="menu-item">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="addcar.html">Add Car</a></li>
+            <li><a href="#" class="active">Login/Signup</a></li>
+            <li><a href="weatherApi.html">GetWeather</a></li>
+        </ul>
+    </div>
+
+     </div> 
+    <!-- login Container -->
+    <div id="container">
+        <h1 id="loginTitle">Log In</h1>
+        <span class="close-btn">
+            <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
+        </span>
+
+        <form>
+            <input type="email" name="email" placeholder="E-mail" id="email" class="email">
+
+            <input type="password" name="pass" placeholder="Password" id="password" class="password">
+            
+            <button href="#" class="click" id="log-in">Log in</button>
+            <div id="remember-container">
+                <a href="#"><span id="forget">forget password?</span></a>
+                <a href="register-page.html"><span id="Register">Register</span></a>
+            </div>
+        </form>
+    </div>
+
+    
+
+    <!-- Forget Container -->
+    <div id="forget-container">
+        <h1 style="font-size:150%; margin: 5%;">Forget password</h1>
+
+        <span class="close-btn">
+            <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
+        </span>
+
+
+        <p style="color: rgb(224, 207, 207);margin-left: 10px;">Please enter your email:</p>
+
+        <form>
+            <input type="email" name="email" placeholder="E-mail">
+            <br>
+            <a style="margin-top: -10px;" id="sendPassword" href="#">send password</a>           
+        </form>
+    </div>
+
+    <!-- start loader section -->
+   <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left" ></div>
+    <div class="loader-section section-right" ></div>
+   </div>
+   <!-- end loader section -->
+
+</body> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="vendor/js/loginScript.js"></script>
+
+</html>

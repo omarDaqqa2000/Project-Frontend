@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+  <!--fontawesome css--> 
+  <link href="vendor/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Bootstrap -->
+	<link  rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+    <!-- Custom stlylesheet -->
+    <link rel="stylesheet" href="assests/css/WeatherStyle.css" />
+    <script
+      src="https://kit.fontawesome.com/09a51149e7.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg pt-3" id="home">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="assests/img/car_rental_logo.gif" alt="logo website"/>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="content me-5 mt-2">
+              <a href="#">Contact: (562) 498-4600</a>
+              <a href="#">Email: xyz@carrental.com</a>
+            </div> 
+            <ul class="navbar-nav ms-auto mt-5 mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link  text-capitalize me-3 px-0 mx-3" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-capitalize me-3 px-0 mx-3" href="addcar.html">Add Car For Rental</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-capitalize me-3 px-0 mx-3" href="login.html">Login/SignUp</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-capitalize me-3 px-0 mx-3" href="#">get Weather</a>
+              </li>
+              
+              
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+    <div class="container">
+      <div class="weather-app" id="background">
+        <form class="search-form" id="search-country-form">
+          <div class="row">
+            <div class="col-8">
+              <input
+                class="form-control shadow-sm"
+                id="country-input"
+                type="search"
+                placeholder="Search City"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-2">
+              <button class="shadow-sm submit" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                type="button"
+                class="btn btn-primary shadow-sm now-button"
+                id="now-button"
+              >
+                <span class="now-button-wrapper"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <header class="location-overveiw">
+          <div class="row">
+            <div class="col-6">
+              <h1 class="city"></h1>
+              <h6 class="sub-heading">
+                Last Updated:
+                <span id="time-date"></span>
+                <br />
+                <span id="weather-description"></span>
+              </h6>
+            </div>
+            <div class="col-6">
+              <img
+                class="weather-icon img-fluid"
+                id="weather-icon"
+                src=""
+                alt=""
+              />
+            </div>
+          </div>
+        </header>
+
+        <section class="current-weather">
+          <div class="row">
+            <div class="col-7 current-temp">
+              <span id="current-temp"></span>
+              <span class="unit d-none d-sm-inline" id="unit"> °C</span>
+            </div>
+            <div class="col-5">
+              <ul class="current-conditions">
+                <li> 
+                  <strong>Feels Like: <span id="feels-like"></span>°</strong>
+                </li>
+                <li>
+                  <strong>Humidity: <span id="humidity"></span>%</strong>
+                </li>
+                <li>
+                  <strong>Wind: <span id="wind"></span>km/h</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="future-forecast" id="future-forecast"></section>
+      </div>
+    </div>
+
+
+      <!-- start loader section -->
+   <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left" ></div>
+    <div class="loader-section section-right" ></div>
+   </div>
+   <!-- end loader section -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="vendor/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/js/script.js"></script>
+  </body>
+</html>

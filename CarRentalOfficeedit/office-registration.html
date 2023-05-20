@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Office Registration</title>
+
+    
+
+    <!-- Main css -->
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link href='assests/css/officeRegistrationStyle.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <section class="container">
+        <div class="signup-content">
+            <div class="signup-img ">
+                <img src="assests/img/office-registration-background.jpg"  alt="">
+                <div class="signup-img-content">
+                    <h2 style="color: rgb(77, 133, 238)";>Register Now </h2>
+                    <h3 style="color: rgb(77, 133, 238);";>Get Your Car </h3>
+                </div>
+            </div>
+            <div class="signup-form">
+                <form method="POST" class="register-form" id="register-form">
+                    <div class="form-row">
+ 
+                        <!--Left Side-->
+                        <div class="form-group">
+                            <div class="form-input">
+
+                                <label for="fname" class="required">FirstName</label>
+                                <input type="text" name="fname" id="fname" />
+                                <div class="small text-danger" id="nameAlert">*name start with capital(2-10)</div>
+
+                                <label for="lname" class="required">Last Name</label>
+                                <input type="text" name="lname" id="lname" />
+                                <div class="small text-danger" id="nameAlert">*name start with capital(2-10)</div>
+
+                                <label for="phone_number" class="required">Phone number</label>
+                                <input type="number" name="phone_number" id="phone_number" />
+                                <div class="small text-danger" id="nameAlert">*name start with capital(2-10)</div>
+
+                                <label for="email" class="required">Email</label>
+                                <input type="text" name="email" id="email" />
+                                <div class="small text-danger" id="nameAlert">*name start with capital(2-10)</div>
+
+                                <label for="password" class="required">Password</label>
+                                <input type="password" name="password" id="password" />
+                                <div class="small text-danger" id="nameAlert">*name start with capital(2-10)</div>
+
+
+                            </div>
+                        </div>
+
+                        <!--Right Side-->
+                        <div class="form-group">
+                            
+
+                            <div class="form-input">
+                                <label for="description" class="required">Add Any Notes you want to mention </label>
+                                <textarea rows="7" cols="50" form="register-form" name="description" id="description" placeholder="  --Descripe Exact Area--"></textarea>
+                                <div class="small text-danger" id="nameAlert">*name start with capital(2-10)</div>
+                            </div>
+
+                            <div class="form-submit">
+                                <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                                <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS -->
+    
+    <script src="vendor/js/officeRegistration.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>

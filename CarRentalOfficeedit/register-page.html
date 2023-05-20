@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <!-- Bootstrap -->
+	<link  rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+
+
+     <!--fontawesome css-->
+     <link href="vendor/css/all.min.css" rel="stylesheet"/>
+	 
+     <!-- sweet alert css-->
+     <link href="assests/css/sweetalert2.min.css" rel="stylesheet"/>
+     
+     <link rel="stylesheet" href="assests/css/register-page.css"/>
+    
+</head>
+<body>
+      
+  <nav class="navbar navbar-expand-lg pt-3" id="home">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assests/img/car_rental_logo.gif" alt="logo website"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="content me-5 mt-2">
+          <a href="#">Contact: (562) 498-4600</a>
+          <a href="#">Email: xyz@carrental.com</a>
+        </div> 
+        <ul class="navbar-nav ms-auto mt-5 mb-2 mb-lg-0">
+          <li class="nav-item"> 
+            <a class="nav-link active text-capitalize me-3 px-0 mx-3" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize me-3 px-0 mx-3" href="addcar.html">Add Car For Rental</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize me-3 px-0 mx-3" href="login.html">Login/SignUp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize me-3 px-0 mx-3" href="weatherApi.html">get Weather</a>
+          </li>
+          
+          
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+    <div class="body-content">
+        <div class="module">
+          <h1>Create Account</h1>
+          <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
+            <div class="alert alert-error"></div>
+
+            <span class="form-label" >FirstName</span>
+            <input class="form-control" type="text" placeholder="FirstName" id="fname" name="fname" required />
+            <div class="small text-danger" id="FirstAlert">*name start with capital(2-10)</div>
+
+
+            <span class="form-label" >LastName</span>
+            <input class="form-control" type="text" placeholder="LastName" id="lname" name="lname" required />
+            <div class="small text-danger" id="LastAlert">*name start with capital(2-10)</div>
+
+            <span class="form-label">Phone</span>
+            <input class="form-control" type="number" placeholder="Phone" id="phone" name="phone" required />
+            <div class="small text-danger" id="PhoneAlert">*Phone Enter 10 digit</div>
+
+            <span class="form-label" >Email</span>
+            <input class="form-control" type="email" placeholder="Email" id="email" name="email" required />
+            <div class="small text-danger" id="EmailAlert">*Example: Omar@example.com</div>
+
+            <span class="form-label" >Password</span>
+            <input class="form-control" type="password" placeholder="Password" id="password" name="password" autocomplete="new-password" required />
+            <div class="small text-danger" id="PassAlert">*Enter (7-15) capital/small/number/symbols </div>
+            
+            
+            <span class="form-label" >RePassword</span>
+            <input class="form-control" type="password" placeholder="RePassword" id="repassword" name="repassword" autocomplete="new-repassword" required />
+            <div class="small text-danger" id="RePassAlert">*Enter (7-15) capital/small/number/symbols and same password</div>
+            
+            
+            <div class="row">
+						 
+					
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <button type="submit" value="Update Car" class="btn btn-outline-info mt-3" id="update">Update Info</button>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <button class="btn btn-outline-secondary mt-3" id="clearbtn" type="reset">clear</button>
+                </div>
+              </div>
+            </div>
+            
+            <input type="submit" value="Register" name="register" class="btn btn-block btn-primary" id="click" />
+          </form>
+        </div>
+      </div>
+
+ 
+      <section class="data pt-4 pb-5">
+        <div class="container-fluid">
+                <input type="search" placeholder="search..." id="search" class="form-control my-3">
+    
+                <table class="table table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            
+                            
+                        </tr>
+                    </thead>
+                    <button id="deleteBtn" class="btn btn-outline-danger text-center my-3">delete all</button>
+                    <tbody id="data">
+                        
+                    </tbody>
+                </table>
+            </div> 
+      </section>
+
+      <!-- start loader section -->
+   <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left" ></div>
+    <div class="loader-section section-right" ></div>
+   </div>
+   <!-- end loader section -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="vendor/js/bootstrap.bundle.min.js"></script>
+      <script src="vendor/js/officeRegistration.js"></script>
+      <script src="vendor/js/sweetalert2.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Booking Form HTML Template</title>
+
+	<!-- Google font --> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+ 
+    <!--fontawesome css-->
+    <link href="vendor/css/all.min.css" rel="stylesheet"/>
+	
+	<!-- sweet alert css-->
+    <link href="assests/css/sweetalert2.min.css" rel="stylesheet"/>
+	
+	<!-- Bootstrap -->
+	<link  rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+
+	<!-- Custom stlylesheet -->
+	<link  rel="stylesheet" href="assests/css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg pt-3 " id="home">
+		<div class="container">
+		  <a class="navbar-brand" href="#">
+			<img src="assests/img/car_rental_logo.gif" alt="logo website"/>
+		  </a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="content me-5 mt-2">
+			  <a href="#">Contact: (562) 498-4600</a>
+			  <a href="#">Email: xyz@carrental.com</a>
+			</div>
+			<ul class="navbar-nav ms-auto mt-5 mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a class="nav-link  text-capitalize me-3 px-0 mx-3" aria-current="page" href="index.html">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link active text-capitalize me-3 px-0 mx-3" target=”_blank” href="#">Add Car For Rental</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link text-capitalize me-3 px-0 mx-3" href="login.html">Login/SignUp</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link text-capitalize me-3 px-0 mx-3" href="weatherApi.html">get Weather</a>
+			  </li>
+			  
+			   
+			   
+			</ul>
+			
+		  </div>
+		</div>
+	  </nav>
+
+	<section class="add_car mt-5  ">
+		<div class="container">
+			<div class="row d-flex">
+					<div class="col-md-6 mt-5 ">
+						<div id="booking" class="section mt-5 pb-5">
+							<div class="section-center">
+								<div class="container"> 
+									<div class="row">
+										<div class="booking-form mt-5 pt-5  ">
+											<div class="form-header pt-5 mt-5">
+												<h1>Add Car</h1>
+											</div> 
+											<form>
+												<div class="row">
+													<div class="col-sm-12">
+														<div class="form-group">
+															<span class="form-label" >Car Name</span>
+															<input class="form-control " id="carName" type="text" placeholder="Enter Car Name">
+														    <div class="small text-danger" id="nameAlert">*name start with capital(2-10)</div>
+														</div>
+													</div>
+					
+													
+												</div>
+					
+												<div class="row">
+													<div class="col-sm-6">
+														<div class="form-group">
+															<span class="form-label">Model</span>
+															<input class="form-control" id="carModel" type="number" placeholder="Enter Model car">
+															<div class="small text-danger" id="modelAlert">*Enter Year</div>
+														</div>
+													</div>
+													<div class="col-sm-6">
+														<div class="form-group">
+															<span class="form-label">Door</span>
+															<input class="form-control" id="carDoor" type="number" placeholder="Enter number of Door">
+															<div class="small text-danger" id="doorAlert">* number of Door (2-4)</div>
+														</div>
+													</div>
+												</div>
+					
+												<div class="row">
+													<div class="col-sm-6">
+														<div class="form-group">
+															<span class="form-label">Seats</span>
+															<input class="form-control" id="carSeats" type="Number" placeholder="Enter number of Seats">
+															<div class="small text-danger" id="seatsAlert">*just number 4-7 </div>
+														</div>
+													</div>
+					
+													<div class="col-sm-6">
+														<div class="form-group">
+															<span class="form-label">Luggage</span>
+															<input class="form-control" id="carLuggage" type="text" placeholder="Luggage">
+															<div class="small text-danger" id="luggageAlert">* please start with capittal</div>
+														</div>
+													</div>
+												</div>
+					
+												<div class="row">
+													<div class="col-sm-6">
+														<div class="form-group">
+															<span class="form-label">Transmission</span>
+															<input class="form-control" id="cargearbox" type="text" placeholder="Automatic/mannual">
+															<div class="small text-danger" id="gearAlert">*Auto/Mannual</div>
+														</div>
+													</div>
+					
+													<div class="col-sm-6">
+														<div class="form-group">
+															<span class="form-label">Air conditioning</span>
+															<input class="form-control" id="carAir" type="text" placeholder="Yes/No">
+															<div class="small text-danger" id="airAlert">*Yes/No</div>
+														</div>
+													</div>
+												</div>
+					
+												<div class="row">
+													<div class="col-sm-6">
+														<div class="form-group">
+															<span class="form-label">Minimum age</span>
+															<input class="form-control" id="carAge" type="number" placeholder="Minimum age">
+															<div class="small text-danger" id="ageAlert">*Number of year</div>
+														</div>
+													</div>
+					
+													<div class="col-sm-6">
+														<div class="form-group">
+															<span class="form-label">Price</span>
+															<input class="form-control" id="carPrice" type="number" placeholder="Enter Price">
+															<div class="small text-danger" id="priceAlert">* Number </div>
+														</div>
+													</div>
+
+													<div class="col-sm-12">
+														<div class="row">
+														<div class="form-group col-md-6">
+															<div class="slider">
+																<div class="images">
+																	<input type="radio" name="slide" id="img1" checked>
+																	<input type="radio" name="slide" id="img2">
+																	<input type="radio" name="slide" id="img3">
+																	
+														            
+																	<img src="assests/img/ferrari.jpg" class="m1 carimage" id="m1" alt="img1">
+																	<img src="assests/img/ford.jpg" class="m2 carimage" id="m2" alt="img2">
+																	<img src="assests/img/opel.jpg" class="m3 carimage" id="m3" alt="img3">
+																	
+																</div>
+																<div class="dots">
+																	<label for="img1"></label>
+																	<label for="img2"></label>
+																	<label for="img3"></label>
+																	 
+																</div>
+																<p class="text-white">Choose image by click on it</p>
+															</div>
+														</div>
+                                                           
+													</div>
+													</div>
+												</div>
+
+												<div class="row">
+						
+					  
+													<div class="col-sm-6">
+														<div class="form-group">
+															<button type="submit" value="Update Car" class="btn btn-outline-info mt-3" id="update">Update Car</button>
+														</div>
+													</div> 
+													<div class="col-sm-6">
+														<div class="form-group">
+															<button class="btn btn-outline-secondary mt-3" id="clearbtn" type="reset">clear</button>
+														</div>
+													</div>
+                                                   
+												</div>
+												
+					
+					
+												<div class="form-btn">
+													<input type="submit" value="Add Car" class="click" id="click"/>
+												</div>
+												
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+			</div> 
+				
+		</div>
+		
+	</section>
+     
+	<section class="data pt-4 pb-5">
+		<div class="container-fluid">
+            <input type="search" placeholder="search..." id="search" class="form-control my-3">
+
+            <table class="table table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>carName</th>
+                        <th>carModel</th>
+                        <th>Door</th>
+                        <th>Seats</th>
+                        <th>Luggage</th>
+                        <th>Gear</th>
+                        <th>carAir</th>
+						<th>carAge</th>
+                        <th>carPrice</th>
+						<th>update</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+                <button id="deleteBtn" class="btn btn-outline-danger text-center my-3">delete all</button>
+                <tbody id="data">
+                    
+                </tbody>
+            </table>
+        </div>
+	</section>
+
+
+	<!-- start loader section -->
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left" ></div>
+		<div class="loader-section section-right" ></div>
+	   </div>
+	   <!-- end loader section -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="vendor/js/sweetalert2.min.js"></script>
+	<script src="vendor/js/bootstrap.bundle.min.js"></script>
+	<script src="vendor/js/add.js"></script>
+	<script>
+		
+	
+
+	 </script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
